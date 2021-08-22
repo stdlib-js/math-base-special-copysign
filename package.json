@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-copysign",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Return a double-precision floating-point number with the magnitude of x and the sign of y.",
   "license": "Apache-2.0",
   "author": {
