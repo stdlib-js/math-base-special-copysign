@@ -1,0 +1,39 @@
+{
+  "name": "@stdlib/math-base-special-copysign",
+  "version": "0.0.0",
+  "description": "Return a double-precision floating-point number with the magnitude of x and the sign of y.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-copysign.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "math",
+    "mathematics",
+    "float64",
+    "float",
+    "floating-point",
+    "ieee754",
+    "double",
+    "copysign",
+    "copy",
+    "sign",
+    "bits",
+    "number",
+    "dbl",
+    "special",
+    "function"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
