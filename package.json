@@ -40,6 +40,8 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/constants-float64-high-word-abs-mask": "^0.0.x",
+    "@stdlib/constants-float64-high-word-sign-mask": "^0.0.x",
     "@stdlib/math-base-napi-binary": "^0.0.x",
     "@stdlib/number-float64-base-from-words": "^0.0.x",
     "@stdlib/number-float64-base-get-high-word": "^0.0.x",
