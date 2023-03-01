@@ -210,7 +210,7 @@ int main() {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math/base/special/flipsign`][@stdlib/math/base/special/flipsign]</span><span class="delimiter">: </span><span class="description">return a double-precision floating-point number with the magnitude of x and the sign of x*y.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/flipsign`][@stdlib/math/base/special/flipsign]</span><span class="delimiter">: </span><span class="description">return a double-precision floating-point number with the magnitude of x and the sign of x*y.</span>
 
 </section>
 
