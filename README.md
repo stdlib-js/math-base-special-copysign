@@ -35,38 +35,32 @@ limitations under the License.
 
 > Return a [double-precision floating-point number][ieee754] with the magnitude of `x` and the sign of `y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-copysign
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-copysign = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var copysign = require( 'path/to/vendor/umd/math-base-special-copysign/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.copysign;
-})();
-</script>
+var copysign = require( '@stdlib/math-base-special-copysign' );
 ```
 
 #### copysign( x, y )
@@ -110,32 +104,19 @@ z = copysign( -0.0, 1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var copysign = require( '@stdlib/math-base-special-copysign' );
 
-var x;
-var y;
-var z;
-var i;
+var opts = {
+    'dtype': 'float64'
+};
+var x = uniform( 100, -50.0, 50.0, opts );
+var y = uniform( 100, -5.0, 5.0, opts );
 
 // Generate random double-precision floating-point numbers `x` and `y` and copy the sign of `y` to `x`...
-for ( i = 0; i < 100; i++ ) {
-    x = (randu()*100.0) - 50.0;
-    y = (randu()*10.0) - 5.0;
-    z = copysign( x, y );
-    console.log( 'x: %d, y: %d => %d', x, y, z );
-}
-
-})();
-</script>
-</body>
-</html>
+logEachMap( 'x: %0.4f, y: %0.4f => %0.4f', x, y, copysign );
 ```
 
 </section>
@@ -144,7 +125,92 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/copysign.h"
+```
+
+#### stdlib_base_copysign( x, y )
+
+Returns a [double-precision floating-point number][ieee754] with the magnitude of `x` and the sign of `y`.
+
+```c
+double v = stdlib_base_copysign( -3.14, 10.0 );
+// returns 3.14
+
+double v = stdlib_base_copysign( 3.14, -1.0 );
+// returns -3.14
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` number from which to derive a magnitude.
+-   **y**: `[in] double` number from which to derive a sign.
+
+```c
+double stdlib_base_copysign( const double x, const double y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/copysign.h"
+#include <stdio.h>
+
+int main( void ) {
+    const double x[] = { 3.14, -3.14, 0.0, 0.0/0.0 };
+
+    double y;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        y = stdlib_base_copysign( x[ i ], -3.0 );
+        printf( "copysign(%lf, %lf) = %lf\n", x[ i ], -3.0, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -236,7 +302,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/flipsign]: https://github.com/stdlib-js/math-base-special-flipsign/tree/umd
+[@stdlib/math/base/special/flipsign]: https://github.com/stdlib-js/math-base-special-flipsign
 
 <!-- </related-links> -->
 
