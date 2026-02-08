@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@deno/mod.js';
+import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@v0.2.3-deno/mod.js';
 ```
 
 #### copysign( x, y )
@@ -89,7 +89,7 @@ z = copysign( -0.0, 1.0 );
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@deno/mod.js';
+import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@v0.2.3-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
